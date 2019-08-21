@@ -1,6 +1,6 @@
 import pygame
 
-from tiles import Tile
+from client.tiles import Tile
 
 
 class State:
@@ -11,6 +11,7 @@ class State:
                  grid_size: int,
                  display_width: int,
                  display_height: int,
+                 valid_inputs: dict,
                  py_game: pygame):
         self.world_map: list = world_map
         self.view: list = world_map
@@ -19,6 +20,7 @@ class State:
         self.display_width = display_width
         self.display_height = display_height
         self.py_game = py_game
+        self.valid_inputs = valid_inputs
         self.screen = self.py_game.display.set_mode((display_width, display_height))
 
     def get_tile(self, x: int, y: int) -> Tile:

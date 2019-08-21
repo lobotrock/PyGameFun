@@ -1,10 +1,10 @@
 import random
 
-from tiles import grass, water, sand, empty
+from client.tiles import grass, water, sand, empty
 
 
 # TODO: make this more interesting and faster
-def generate_map(width: int, height: int):
+async def generate_map(width: int, height: int):
     return [[rand_tile(x_, y_, width, height) for y_ in range(0, height)] for x_ in range(0, width)]
 
 

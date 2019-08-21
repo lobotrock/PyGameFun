@@ -1,5 +1,5 @@
-from state import State
-from tiles import empty
+from client.state import State
+from client.tiles import empty
 
 
 def draw_grid(state: State):
@@ -56,7 +56,7 @@ def game_draw_player(state, color):
 def render(state: State):
     # Startup screen
     if state.world_map is None:
-        draw_hud(state, "Map generating...")
+        draw_hud(state, "Press g to generate map!")
 
     # draw map
     else:
