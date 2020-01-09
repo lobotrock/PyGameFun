@@ -68,5 +68,5 @@ class GameHost:
         return self.game_state
 
 
-
-GameHost()
+if __name__ == '__main__':
+    GameHost()
